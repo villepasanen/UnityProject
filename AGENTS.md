@@ -2,7 +2,7 @@
 - Project name: UnityProject
 - Unity version: Unity 6000.5.7f1
 - Active game object:
-  - Name: Player
-  - Tag: Player
-  - Layer: Player
+  - Name: PlayerCamera
+  - Tag: MainCamera
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
