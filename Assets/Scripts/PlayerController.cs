@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +8,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     [SerializeField] float movementSpeed;
     [SerializeField] SpriteRenderer _characterBody;
     [SerializeField] Animator _animator;
+    [SerializeField] AudioClip _footstep;
+    private  float _nextfootstepAudio = 0f;
     private Rigidbody2D _rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,6 +53,22 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         bool flipSprite = movement.x < 0f;
         _characterBody.flipX = flipSprite;
+        if (characterIsWalking)
+        {
+            HandleWalkingSounds();
+        }
+    }
+
+    void HandleWalkingSounds()
+    {
+        if (Time.time >= _nextfootstepAudio) 
+        {
+            AudioManager.Instance.PlayAudio(_footstep, AudioManager.SoundType.SFX, 1f, false);
+
+            float audioFrequency = _animator.GetCurrentAnimatorClipInfo(0)[0].clip.length / 2f;
+            _nextfootstepAudio = Time.time + audioFrequency;
+
+        }
     }
 }
 
