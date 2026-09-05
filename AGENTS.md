@@ -2,7 +2,7 @@
 - Project name: UnityProject
 - Unity version: Unity 6000.5.7f1
 - Active game object:
-  - Name: AudioManager
+  - Name: Staff
   - Tag: Untagged
-  - Layer: Default
+  - Layer: Player
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
