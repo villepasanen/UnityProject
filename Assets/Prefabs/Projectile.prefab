@@ -112,7 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   _travelSpeed: 10
-  _damage: 1
+  _damage: 5
+  _enemyHitSound: {fileID: 8300000, guid: ff9036201ea3ec046a8219dfa305a4f7, type: 3}
   _hitParticles: {fileID: 3993189882178445018, guid: cc16a4554d8cde1438c78753871cac0a, type: 3}
   _rb: {fileID: 5729063080030188336}
 --- !u!1 &6581866303275774038

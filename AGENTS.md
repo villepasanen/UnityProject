@@ -2,7 +2,7 @@
 - Project name: UnityProject
 - Unity version: Unity 6000.5.7f1
 - Active game object:
-  - Name: Staff
-  - Tag: Untagged
-  - Layer: Player
+  - Name: BasicEnemy
+  - Tag: Enemy
+  - Layer: Enemies
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
