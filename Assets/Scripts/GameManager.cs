@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
         Instance = this;
+        DontDestroyOnLoad(this); //Singleton persist after scene change
         Time.timeScale = 0f;
     }
     public void StartGame()

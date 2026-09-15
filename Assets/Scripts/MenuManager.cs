@@ -4,6 +4,7 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField]CanvasGroup _mainMenuButtonsCG;
     [SerializeField] CanvasGroup _quitConfirmationCG;
+    [SerializeField] CanvasGroup _SettingsCG;
     CanvasGroup _mainMenuCG;
 
    void Awake()
@@ -44,6 +45,16 @@ public class MenuManager : MonoBehaviour
     {
         CanvasGroupSetState(_mainMenuCG, false);
 
+    }
+    public void OpenSettings()
+    {
+        CanvasGroupSetState(_mainMenuButtonsCG, false);
+        CanvasGroupSetState(_SettingsCG, true);
+    }
+    public void CloseSettings()
+    {
+        CanvasGroupSetState(_mainMenuButtonsCG, true);
+        CanvasGroupSetState(_SettingsCG, false);
     }
     public void Play()
     {
